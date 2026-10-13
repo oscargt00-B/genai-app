@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Vehicles</span>
+              <span class="progress-mobile__count">Step 3 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--active">Vehicles</li>
+            <li class="progress__item">Discounts</li>
+            <li class="progress__item">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="detail-layout">
+          <div class="drivers-column">
+            <div class="intro intro--compact">
+              <h1>Which vehicles should we include?</h1>
+              <p>Here&rsquo;s what we found so far.</p>
+            </div>
+
+            <div class="vehicle-cards" data-vehicle-cards>
+              <button
+                class="driver-card driver-card--add vehicle-card"
+                type="button"
+                data-add-vehicle-page="true"
+              >
+                <span class="driver-card__content">
+                  <span class="driver-card__title">Add a vehicle</span>
+                </span>
+                <span class="driver-card__plus" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false" class="icon-stroke">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7.5v9" />
+                    <path d="M7.5 12h9" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <template id="vehicle-card-template">
+              <article class="driver-card vehicle-card" data-vehicle-card="true">
+                <div class="driver-card__content">
+                  <h2></h2>
+                  <p></p>
+                </div>
+                <div class="driver-card__actions">
+                  <button class="driver-card__action" type="button" data-edit-vehicle="true">
+                    Edit
+                  </button>
+                  <button class="driver-card__action" type="button" data-delete-vehicle="true">
+                    Delete
+                  </button>
+                </div>
+              </article>
+            </template>
+
+            <div class="info-block">
+              <span class="info-block__icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                  <circle cx="8" cy="8" r="6.25" />
+                  <path d="M8 6.7v3.35" />
+                  <circle cx="8" cy="4.6" r="0.55" class="icon-fill" />
+                </svg>
+              </span>
+              <div class="info-block__text">
+                <p>All vehicles on this policy must be used only for personal purposes, and not for commercial use.</p>
+              </div>
+            </div>
+
+            <div class="button-row button-row--spaced">
+              <button class="secondary-button" type="button" data-go-back="./drivers.html">Back</button>
+              <button class="primary-button" type="button" data-go-to="./discounts.html">Next</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

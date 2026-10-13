@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverage Start</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Discounts</span>
+              <span class="progress-mobile__count">Step 4 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./vehicles.html">Vehicles</a></li>
+            <li class="progress__item progress__item--active">Discounts</li>
+            <li class="progress__item">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="detail-layout">
+          <div class="coverage-column">
+            <div class="intro intro--compact">
+              <h1>When should we start?</h1>
+              <p>The earlier you shop, the more you save.</p>
+            </div>
+
+            <form class="quote-form quote-form--detail">
+              <label class="field">
+                <span>Coverage start date</span>
+                <div class="coverage-date-picker" data-coverage-date-picker>
+                  <div
+                    class="coverage-date-field"
+                    role="button"
+                    tabindex="0"
+                    aria-haspopup="dialog"
+                    aria-expanded="false"
+                    aria-controls="coverage-date-overlay"
+                    data-coverage-date-trigger
+                  >
+                    <input
+                      type="text"
+                      placeholder="MM/DD/YYYY"
+                      readonly
+                      data-coverage-date-input
+                    />
+                    <span class="coverage-date-field__icon" aria-hidden="true">
+                      <svg viewBox="0 0 20 20" focusable="false" class="icon-stroke">
+                        <rect x="3.5" y="5" width="13" height="11.5" rx="1.5" />
+                        <path d="M6 3.5v3" />
+                        <path d="M14 3.5v3" />
+                        <path d="M3.5 8.5h13" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div
+                    class="coverage-date-overlay"
+                    id="coverage-date-overlay"
+                    role="dialog"
+                    aria-label="Choose a coverage start date"
+                    hidden
+                    data-coverage-date-overlay
+                  >
+                    <div class="coverage-date-overlay__header">
+                      <button
+                        class="coverage-date-overlay__nav"
+                        type="button"
+                        aria-label="Previous month"
+                        data-coverage-date-prev
+                      >
+                        <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                          <path d="M9.75 3.5 5.25 8l4.5 4.5" />
+                        </svg>
+                      </button>
+                      <p data-coverage-date-label></p>
+                      <button
+                        class="coverage-date-overlay__nav"
+                        type="button"
+                        aria-label="Next month"
+                        data-coverage-date-next
+                      >
+                        <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                          <path d="M6.25 3.5 10.75 8l-4.5 4.5" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="coverage-date-overlay__weekdays" aria-hidden="true">
+                      <span>Su</span>
+                      <span>Mo</span>
+                      <span>Tu</span>
+                      <span>We</span>
+                      <span>Th</span>
+                      <span>Fr</span>
+                      <span>Sa</span>
+                    </div>
+                    <div class="coverage-date-overlay__grid" data-coverage-date-grid></div>
+                  </div>
+                </div>
+                <span class="coverage-note" data-coverage-note>
+                  You may receive an Advance Shopper Discount when you start your policy --/-- or later.
+                </span>
+              </label>
+
+              <div class="button-row">
+                <button class="secondary-button" type="button" data-go-back="./discounts.html">Back</button>
+                <button class="primary-button" type="button" data-go-to="./your-quote.html">Next</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

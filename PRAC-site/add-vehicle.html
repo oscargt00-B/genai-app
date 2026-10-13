@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Vehicle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Vehicles</span>
+              <span class="progress-mobile__count">Step 3 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--active">Vehicles</li>
+            <li class="progress__item">Discounts</li>
+            <li class="progress__item">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="detail-layout">
+          <div class="vehicle-editor-column">
+            <div class="intro intro--compact vehicle-editor-intro">
+              <h1 data-vehicle-form-title="true">Add a vehicle.</h1>
+              <p><a href="#">Add using the VIN number</a></p>
+            </div>
+
+            <form class="quote-form quote-form--detail" data-vehicle-editor-form="true">
+              <label class="field">
+                <span>Year</span>
+                <input
+                  type="text"
+                  list="vehicle-year-options"
+                  placeholder="Select"
+                  autocomplete="off"
+                  data-vehicle-editor-year="true"
+                />
+                <datalist id="vehicle-year-options"></datalist>
+              </label>
+
+              <label class="field">
+                <span>Make</span>
+                <input
+                  type="text"
+                  list="vehicle-make-options"
+                  placeholder="Select make"
+                  autocomplete="off"
+                  data-vehicle-editor-make="true"
+                />
+                <datalist id="vehicle-make-options"></datalist>
+              </label>
+
+              <label class="field">
+                <span>Model</span>
+                <input
+                  type="text"
+                  list="vehicle-model-options"
+                  placeholder="Select model"
+                  autocomplete="off"
+                  data-vehicle-editor-model="true"
+                />
+                <datalist id="vehicle-model-options"></datalist>
+              </label>
+
+              <div class="vehicle-warning">
+                <div class="vehicle-warning__icon" aria-hidden="true">i</div>
+                <div class="vehicle-warning__text">
+                  <p><strong>Don&rsquo;t see your vehicle?</strong></p>
+                  <p>
+                    If you don&rsquo;t see your car, we can&rsquo;t provide you an online quote. For
+                    example, very new car models, collector vehicles, commercial trucks and
+                    motorcycles are not eligible. Please call <a href="#">(800) 521-4067</a> for
+                    help with what type of policy you need and where you may be able to get
+                    coverage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="button-row add-driver-actions">
+                <button class="secondary-button" type="button" data-go-back="./vehicles.html">
+                  Back
+                </button>
+                <button class="primary-button" type="submit">Save</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

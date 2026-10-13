@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discounts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Discounts</span>
+              <span class="progress-mobile__count">Step 4 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./vehicles.html">Vehicles</a></li>
+            <li class="progress__item progress__item--active">Discounts</li>
+            <li class="progress__item">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="detail-layout">
+          <div class="discounts-column">
+            <div class="intro intro--compact">
+              <h1>Let&rsquo;s find your discounts.</h1>
+              <p>Most customers qualify for multiple discounts. Let&rsquo;s make sure you get yours.</p>
+            </div>
+
+            <div class="discount-group">
+              <h2>Person Name 1</h2>
+              <div class="discount-row">
+                <div class="discount-row__question">
+                  <p>Have you completed a state-approved defensive driver course within the last 3 years?</p>
+                  <span class="discount-row__hint">?</span>
+                </div>
+                <div class="discount-row__choices">
+                  <label class="radio-option"><input type="radio" name="person1-defensive" /><span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="person1-defensive" /><span>No</span></label>
+                </div>
+              </div>
+
+              <div class="discount-row">
+                <div class="discount-row__question">
+                  <p>Do you want to drive with YUBI and <strong>save up to 29%?</strong></p>
+                  <span class="discount-row__hint">?</span>
+                </div>
+                <div class="discount-row__choices">
+                  <label class="radio-option"><input type="radio" name="person1-yubi" /><span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="person1-yubi" /><span>No</span></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="discount-group">
+              <h2>Person Name 2</h2>
+              <div class="discount-row">
+                <div class="discount-row__question">
+                  <p>Does this driver want to drive with YUBI and save more?</p>
+                </div>
+                <div class="discount-row__choices">
+                  <label class="radio-option"><input type="radio" name="person2-yubi" /><span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="person2-yubi" /><span>No</span></label>
+                </div>
+              </div>
+
+              <div class="discount-row">
+                <div class="discount-row__question">
+                  <p>Have you completed a state-approved defensive driver course within the last 3 years?</p>
+                </div>
+                <div class="discount-row__choices">
+                  <label class="radio-option"><input type="radio" name="person2-defensive" /><span>Yes</span></label>
+                  <label class="radio-option"><input type="radio" name="person2-defensive" /><span>No</span></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="intro intro--compact discounts-title">
+              <h1>Policy discounts</h1>
+            </div>
+
+            <div class="discount-row">
+              <div class="discount-row__question">
+                <p>Do you want to receive policy documents electronically?</p>
+                <span class="discount-row__hint">?</span>
+              </div>
+              <div class="discount-row__choices">
+                <label class="radio-option"><input type="radio" name="docs-electronic" /><span>Yes</span></label>
+                <label class="radio-option"><input type="radio" name="docs-electronic" /><span>No</span></label>
+              </div>
+            </div>
+
+            <div class="discount-row">
+              <div class="discount-row__question">
+                <p>Are you or your spouse a member of one of these motor clubs?</p>
+                <span class="discount-row__hint">?</span>
+              </div>
+              <div class="discount-row__control">
+                <div class="select-field">
+                  <select class="select-field__control">
+                    <option selected>Select</option>
+                    <option>AAA</option>
+                    <option>AARP</option>
+                    <option>None</option>
+                  </select>
+                  <span class="select-field__chevron" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" focusable="false" class="icon-stroke">
+                      <path d="m5.5 7.5l4.5 5l4.5-5" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="discount-row">
+              <div class="discount-row__question">
+                <p>Do all drivers on this policy have healthcare insurance?</p>
+                <span class="discount-row__hint">?</span>
+              </div>
+              <div class="discount-row__choices">
+                <label class="radio-option"><input type="radio" name="healthcare" /><span>Yes</span></label>
+                <label class="radio-option"><input type="radio" name="healthcare" /><span>No</span></label>
+              </div>
+            </div>
+
+            <div class="discount-row">
+              <div class="discount-row__question">
+                <p>Are any drivers currently insured through Medicare, Medicaid and/or NJ Family Care?</p>
+                <span class="discount-row__hint">?</span>
+              </div>
+              <div class="discount-row__choices">
+                <label class="radio-option"><input type="radio" name="medicare" /><span>Yes</span></label>
+                <label class="radio-option"><input type="radio" name="medicare" /><span>No</span></label>
+              </div>
+            </div>
+
+            <div class="discount-row">
+              <div class="discount-row__question">
+                <p>Do you have homeowners insurance on your primary residence?</p>
+                <span class="discount-row__hint">?</span>
+              </div>
+              <div class="discount-row__choices">
+                <label class="radio-option"><input type="radio" name="homeowners" /><span>Yes</span></label>
+                <label class="radio-option"><input type="radio" name="homeowners" /><span>No</span></label>
+              </div>
+            </div>
+
+            <div class="button-row button-row--spaced">
+              <button class="secondary-button" type="button" data-go-back="./vehicles.html">Back</button>
+              <button class="primary-button" type="button" data-go-to="./coverage-start.html">Next</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Quote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="#" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">About You</span>
+              <span class="progress-mobile__count">Step 1 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--active">About You</li>
+            <li class="progress__item">Drivers</li>
+            <li class="progress__item">Vehicles</li>
+            <li class="progress__item">Discounts</li>
+            <li class="progress__item">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="hero-layout">
+          <div class="content-column">
+            <div class="intro">
+              <h1>Nice to meet you.</h1>
+              <p>Let&rsquo;s start with a few basics to find the right options for you.</p>
+            </div>
+
+            <form class="quote-form" data-next-page="./details.html">
+              <div class="field-grid field-grid--two">
+                <label class="field">
+                  <span>First name</span>
+                  <input type="text" name="firstName" autocomplete="given-name" />
+                </label>
+                <label class="field">
+                  <span>Last name</span>
+                  <input type="text" name="lastName" autocomplete="family-name" />
+                </label>
+              </div>
+
+              <label class="field">
+                <span>Birth date</span>
+                <input type="text" name="birthDate" placeholder="MM/DD/YYYY" inputmode="numeric" />
+              </label>
+
+              <div class="field-grid field-grid--address">
+                <label class="field field--grow">
+                  <span>Street address</span>
+                  <input type="text" name="streetAddress" autocomplete="street-address" />
+                </label>
+                <label class="field field--compact">
+                  <span>Apt/unit #</span>
+                  <input type="text" name="unit" autocomplete="address-line2" />
+                </label>
+                <label class="field field--compact">
+                  <span>Zip Code</span>
+                  <input type="text" name="zipCode" autocomplete="postal-code" inputmode="numeric" />
+                </label>
+              </div>
+
+              <p class="legal-copy">
+                By selecting &ldquo;Next&rdquo;, you agree to our
+                <a href="#">Terms &amp; Conditions</a>
+                and
+                <a href="#">Privacy Policy</a>.
+              </p>
+
+              <button class="primary-button" type="submit">Next</button>
+            </form>
+          </div>
+
+          <aside class="benefits-card" aria-label="Benefits">
+            <ul class="benefits-list">
+              <li>
+                <span class="benefits-list__icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" focusable="false" class="icon-stroke">
+                    <circle cx="10" cy="10" r="8.1" />
+                    <path d="M10 5.6v4.8l3.1 2" />
+                  </svg>
+                </span>
+                <span><strong>Quick:</strong> Finished in 3 minutes</span>
+              </li>
+              <li>
+                <span class="benefits-list__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false" class="icon-stroke">
+                    <path d="M12 3.2c1.4 0 2.72.54 3.71 1.53c.79-.42 1.67-.64 2.56-.64c2.95 0 5.34 2.39 5.34 5.34c0 .9-.22 1.77-.64 2.56A5.21 5.21 0 0 1 23.5 15.7c0 2.95-2.39 5.34-5.34 5.34c-.9 0-1.77-.22-2.56-.64A5.21 5.21 0 0 1 12 21.93a5.21 5.21 0 0 1-3.6-1.53c-.79.42-1.66.64-2.56.64c-2.95 0-5.34-2.39-5.34-5.34c0-1.4.54-2.72 1.53-3.71a5.21 5.21 0 0 1-1.53-3.6c0-2.95 2.39-5.34 5.34-5.34c.9 0 1.77.22 2.56.64A5.21 5.21 0 0 1 12 3.2Z" />
+                    <path d="m8.2 12.2l2.6 2.6l5.2-7" />
+                  </svg>
+                </span>
+                <span><strong>Easy:</strong> No commitment required</span>
+              </li>
+              <li>
+                <span class="benefits-list__icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" focusable="false" class="icon-fill">
+                    <path d="M10 1.8l5.9 2.15v4.55c0 4.03-2.46 7.7-5.9 9.24c-3.44-1.54-5.9-5.21-5.9-9.24V3.95Z" />
+                    <path d="M10 4.12v11.23c2.24-1.33 3.85-4.04 3.85-6.85V5.54Z" class="icon-fill icon-fill--inverse" />
+                  </svg>
+                </span>
+                <span><strong>Safe:</strong> No impact to your credit</span>
+              </li>
+            </ul>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

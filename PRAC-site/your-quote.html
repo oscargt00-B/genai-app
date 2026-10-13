@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Quote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img
+              class="brand__logo"
+              src="./assets/brand-logo.svg"
+              alt="Plymouth Rock Assurance"
+            />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Your Quote</span>
+              <span class="progress-mobile__count">Step 5 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./vehicles.html">Vehicles</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./discounts.html">Discounts</a></li>
+            <li class="progress__item progress__item--active">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="detail-layout">
+          <div class="quote-column">
+            <div class="intro quote-intro">
+              <h1>Almost there</h1>
+              <p>What coverage should we start with? You can change this before purchase.</p>
+            </div>
+
+            <form class="quote-form quote-form--detail" data-quote-selection-form>
+              <fieldset class="quote-options" aria-label="Coverage options">
+                <label class="quote-option-card" data-quote-option-card>
+                  <input type="radio" name="quote-package" value="maximum-savings" />
+                  <span class="quote-option-card__content">
+                    <span class="quote-option-card__title">Maximum savings</span>
+                    <span class="quote-option-card__description">Essential protection with a lower cost</span>
+                  </span>
+                </label>
+
+                <label class="quote-option-card" data-quote-option-card>
+                  <input type="radio" name="quote-package" value="most-popular" checked />
+                  <span class="quote-option-card__content">
+                    <span class="quote-option-card__title">Most popular</span>
+                    <span class="quote-option-card__description">Balanced coverage and affordable rates</span>
+                  </span>
+                </label>
+
+                <label class="quote-option-card" data-quote-option-card>
+                  <input type="radio" name="quote-package" value="superior-coverage" />
+                  <span class="quote-option-card__content">
+                    <span class="quote-option-card__title">Superior coverage</span>
+                    <span class="quote-option-card__description">Comprehensive coverage for maximum protection</span>
+                  </span>
+                </label>
+              </fieldset>
+
+              <div class="intro quote-contact-intro">
+                <h1>Where can we send your quote?</h1>
+              </div>
+
+              <label class="field">
+                <span>Email</span>
+                <input type="email" value="user@email.com" />
+              </label>
+
+              <label class="field">
+                <span>Cell Phone Number</span>
+                <input type="tel" value="123-555-4567" />
+              </label>
+
+              <p class="quote-consent">
+                I agree to receive marketing calls/texts from Plymouth Rock and its agents at the number
+                provided, which may be auto-dialed or use of pre-recorded voice messages or artificial
+                intelligence. I understand that my agreement is not required to purchase insurance, that I
+                may revoke my consent at any time, and that data rates may apply.
+              </p>
+
+              <div class="button-row button-row--spaced quote-actions">
+                <button class="secondary-button" type="button" data-go-back="./coverage-start.html">Back</button>
+                <button class="primary-button" type="submit" data-view-quote>View my quote</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

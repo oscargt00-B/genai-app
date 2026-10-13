@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maximum Savings Quote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Open+Sans:wght@300;400;600;700&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <a class="brand" href="./index.html" aria-label="Plymouth Rock Assurance">
+            <img class="brand__logo" src="./assets/brand-logo.svg" alt="Plymouth Rock Assurance" />
+          </a>
+          <a class="help-link" href="#" aria-label="Need Help">
+            <span class="help-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" focusable="false" class="icon-stroke">
+                <circle cx="8" cy="8" r="6.25" />
+                <path d="M6.65 6.2a1.6 1.6 0 1 1 2.53 1.3c-.78.57-1.18.93-1.18 1.8" />
+                <circle cx="8" cy="11.8" r="0.55" class="icon-fill" />
+              </svg>
+            </span>
+            <span>Need Help?</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <nav class="progress" aria-label="Quote progress">
+          <div class="progress-mobile">
+            <div class="progress-mobile__header">
+              <span class="progress-mobile__current">Your Quote</span>
+              <span class="progress-mobile__count">Step 5 of 7</span>
+            </div>
+            <ol class="progress-mobile__bar" aria-hidden="true">
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment progress-mobile__segment--active"></li>
+              <li class="progress-mobile__segment"></li>
+              <li class="progress-mobile__segment"></li>
+            </ol>
+          </div>
+          <ol class="progress__list">
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./index.html">About You</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./drivers.html">Drivers</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./vehicles.html">Vehicles</a></li>
+            <li class="progress__item progress__item--previous"><a class="progress__item-link" href="./discounts.html">Discounts</a></li>
+            <li class="progress__item progress__item--active">Your Quote</li>
+            <li class="progress__item">Final Details</li>
+            <li class="progress__item">Purchase</li>
+          </ol>
+        </nav>
+
+        <section class="quote-results" data-quote-results>
+          <div class="quote-results__top">
+            <div class="quote-results__intro">
+              <h1>Select a 6-month estimated policy</h1>
+              <div class="quote-results__tabs" aria-label="Policy options">
+                <button class="quote-results__tab quote-results__tab--active" type="button" data-quote-package-tab="maximum-savings">Maximum savings</button>
+                <button class="quote-results__tab" type="button" data-quote-package-tab="most-popular">Most Popular</button>
+                <button class="quote-results__tab" type="button" data-quote-package-tab="superior-coverage">Superior Coverage</button>
+              </div>
+
+              <div data-quote-package-summary="maximum-savings">
+                <div class="quote-results__price-block">
+                  <p class="quote-results__eyebrow">Pay monthly (Total of 875.00)</p>
+                  <p class="quote-results__copy">Pay $206.07 today then 5 monthly payments of</p>
+                  <p class="quote-results__amount">$133.00</p>
+                  <p class="quote-results__savings">Save <strong>$80.00</strong> when you pay in full: $795.07</p>
+                </div>
+
+                <button class="primary-button quote-results__purchase" type="button">Continue to purchase</button>
+
+                <div class="quote-results__links">
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">✉</span>
+                    <span>Email quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🖨</span>
+                    <span>Print quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🏷</span>
+                    <span>Score! You&rsquo;ve got discounts!</span>
+                  </button>
+                </div>
+              </div>
+
+              <div data-quote-package-summary="most-popular" hidden>
+                <div class="quote-results__price-block">
+                  <p class="quote-results__eyebrow">Pay monthly (Total of 875.00)</p>
+                  <p class="quote-results__copy">Pay $206.07 today then 5 monthly payments of</p>
+                  <p class="quote-results__amount">$238.00</p>
+                  <p class="quote-results__savings">Save <strong>$85.00</strong> when you pay in full: $790.07</p>
+                </div>
+
+                <button class="primary-button quote-results__purchase" type="button">Continue to purchase</button>
+
+                <div class="quote-results__links">
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">✉</span>
+                    <span>Email quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🖨</span>
+                    <span>Print quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🏷</span>
+                    <span>Score! You&rsquo;ve got discounts!</span>
+                  </button>
+                </div>
+              </div>
+
+              <div data-quote-package-summary="superior-coverage" hidden>
+                <div class="quote-results__price-block">
+                  <p class="quote-results__eyebrow">Pay monthly (Total of 875.00)</p>
+                  <p class="quote-results__copy">Pay $206.07 today then 5 monthly payments of</p>
+                  <p class="quote-results__amount">$343.00</p>
+                  <p class="quote-results__savings">Save <strong>$80.00</strong> when you pay in full: $795.07</p>
+                </div>
+
+                <button class="primary-button quote-results__purchase" type="button">Continue to purchase</button>
+
+                <div class="quote-results__links">
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">✉</span>
+                    <span>Email quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🖨</span>
+                    <span>Print quote</span>
+                  </button>
+                  <button type="button" class="quote-results__link">
+                    <span aria-hidden="true">🏷</span>
+                    <span>Score! You&rsquo;ve got discounts!</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quote-results__illustration">
+              <img src="./assets/quote-max-illustration.png" alt="Maximum savings illustration" />
+            </div>
+          </div>
+
+          <div data-quote-package-panel="maximum-savings">
+            <section class="coverage-section">
+              <div class="coverage-section__header coverage-section__header--split">
+                <div>
+                  <h2>Policy coverages</h2>
+                  <p>Coverage paid to others when you are at fault for a covered loss.</p>
+                </div>
+                <span>Premium per month</span>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item">
+                  <div>
+                    <h3>Bodily injury liability</h3>
+                    <p>$10,000 / $20,000</p>
+                  </div>
+                  <strong>$30</strong>
+                </div>
+                <div class="coverage-item coverage-item--last">
+                  <div>
+                    <h3>Property damage liability</h3>
+                    <p>$10,000</p>
+                  </div>
+                  <strong>$40</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Personal coverages</h2>
+                <p>Coverage for you and your passengers.</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Personal injury protection limit</h3><p>$7,000</p></div><strong>$25</strong></div>
+                <div class="coverage-item"><div><h3>Personal injury protection deductible</h3><p>$2,500</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP healthcare selection</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP full/med only</h3><p>Full</p></div><strong>$75/mo</strong></div>
+                <div class="coverage-item"><div><h3>Extra PIP package option</h3><p>Option 1</p></div><strong>$8</strong></div>
+                <div class="coverage-item"><div><h3>Medical payments</h3><p>Named insured</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Tort threshold</h3><p>Limitation on lawsuit</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>UM/UIM bodily injury</h3><p>$10,000 / $25,000</p></div><strong>$20</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>UM/UIM property damage</h3><p>none</p></div><strong>$0</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Vehicle coverages</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Comprehensive</h3><p>$5,000</p></div><strong>$15</strong></div>
+                <div class="coverage-item"><div><h3>Glass deductible</h3><p>$500</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision damage waiver</h3><p>Full benefits</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Towing and labor</h3><p>none</p></div><strong>$0</strong></div>
+                <div class="coverage-item"><div><h3>Rental reimbursement</h3><p>None</p></div><strong>$0</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Loan/lease gap coverage</h3><p>none</p></div><strong>$0</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Package Upgrades</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Included package</h3><p>Essential Assurance | Included</p></div><strong>$0</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Package upgrade</h3><p>No upgrade</p></div><strong>$0</strong></div>
+                <div class="coverage-perks">
+                  <h3>Essential Assurance | Included:</h3>
+                  <ul>
+                    <li>Door-to-Door Valet Claims Service*</li>
+                    <li>Guaranteed repairs</li>
+                    <li>eDocuments & reminders</li>
+                    <li>Get Home Safe taxi ride</li>
+                    <li>Online & mobile services</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Additional Perks</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item coverage-item--last coverage-item--action">
+                  <div>
+                    <h3>Accident forgiveness</h3>
+                  </div>
+                  <div class="coverage-item__action">
+                    <span>Not required</span>
+                    <button type="button" class="coverage-add-button">Add</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div data-quote-package-panel="most-popular" hidden>
+            <section class="coverage-section">
+              <div class="coverage-section__header coverage-section__header--split">
+                <div>
+                  <h2>Policy coverages</h2>
+                  <p>Coverage paid to others when you are at fault for a covered loss.</p>
+                </div>
+                <span>Premium per month</span>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item">
+                  <div>
+                    <h3>Bodily injury liability</h3>
+                    <p>$15,000 / $30,000</p>
+                  </div>
+                  <strong>$48</strong>
+                </div>
+                <div class="coverage-item coverage-item--last">
+                  <div>
+                    <h3>Property damage liability</h3>
+                    <p>$15,000</p>
+                  </div>
+                  <strong>$60</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Personal coverages</h2>
+                <p>Coverage for you and your passengers.</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Personal injury protection limit</h3><p>$10,000</p></div><strong>$40</strong></div>
+                <div class="coverage-item"><div><h3>Personal injury protection deductible</h3><p>$2,500</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP healthcare selection</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP full/med only</h3><p>Full</p></div><strong>$75/mo</strong></div>
+                <div class="coverage-item"><div><h3>Extra PIP package option</h3><p>Option 1</p></div><strong>$8</strong></div>
+                <div class="coverage-item"><div><h3>Medical payments</h3><p>Named insured</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Tort threshold</h3><p>Limitation on lawsuit</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>UM/UIM bodily injury</h3><p>$15,000 / $35,000</p></div><strong>$34</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>UM/UIM property damage</h3><p>$10,000</p></div><strong>$9</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Vehicle coverages</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Comprehensive</h3><p>$10,000</p></div><strong>$32</strong></div>
+                <div class="coverage-item"><div><h3>Glass deductible</h3><p>$1,000</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision damage waiver</h3><p>Full benefits</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Towing and labor</h3><p>Option 1</p></div><strong>$4</strong></div>
+                <div class="coverage-item"><div><h3>Rental reimbursement</h3><p>Limited</p></div><strong>Included</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Loan/lease gap coverage</h3><p>$5,000</p></div><strong>Included</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Package Upgrades</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Included package</h3><p>Essential Assurance | Included</p></div><strong>Included</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Package upgrade</h3><p>Balanced upgrade</p></div><strong>$0</strong></div>
+                <div class="coverage-perks">
+                  <h3>Essential Assurance | Included:</h3>
+                  <ul>
+                    <li>Door-to-Door Valet Claims Service*</li>
+                    <li>Guaranteed repairs</li>
+                    <li>eDocuments & reminders</li>
+                    <li>Get Home Safe taxi ride</li>
+                    <li>Online & mobile services</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Additional Perks</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item coverage-item--last coverage-item--action">
+                  <div>
+                    <h3>Accident forgiveness</h3>
+                  </div>
+                  <div class="coverage-item__action">
+                    <span>Optional</span>
+                    <button type="button" class="coverage-add-button">Add</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div data-quote-package-panel="superior-coverage" hidden>
+            <section class="coverage-section">
+              <div class="coverage-section__header coverage-section__header--split">
+                <div>
+                  <h2>Policy coverages</h2>
+                  <p>Coverage paid to others when you are at fault for a covered loss.</p>
+                </div>
+                <span>Premium per month</span>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item">
+                  <div>
+                    <h3>Bodily injury liability</h3>
+                    <p>$25,000 / $50,000</p>
+                  </div>
+                  <strong>$70</strong>
+                </div>
+                <div class="coverage-item coverage-item--last">
+                  <div>
+                    <h3>Property damage liability</h3>
+                    <p>$25,000</p>
+                  </div>
+                  <strong>$81</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Personal coverages</h2>
+                <p>Coverage for you and your passengers.</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Personal injury protection limit</h3><p>$15,000</p></div><strong>$55</strong></div>
+                <div class="coverage-item"><div><h3>Personal injury protection deductible</h3><p>$2,500</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP healthcare selection</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>PIP full/med only</h3><p>Full</p></div><strong>$75/mo</strong></div>
+                <div class="coverage-item"><div><h3>Extra PIP package option</h3><p>Option 1</p></div><strong>$8</strong></div>
+                <div class="coverage-item"><div><h3>Medical payments</h3><p>Named insured</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Tort threshold</h3><p>Limitation on lawsuit</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>UM/UIM bodily injury</h3><p>$25,000 / $50,000</p></div><strong>$49</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>UM/UIM property damage</h3><p>$25,000</p></div><strong>$17</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Vehicle coverages</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Comprehensive</h3><p>$15,000</p></div><strong>$55</strong></div>
+                <div class="coverage-item"><div><h3>Glass deductible</h3><p>$2,500</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision</h3><p>Health insurance primary</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Collision damage waiver</h3><p>Full benefits</p></div><strong>Included</strong></div>
+                <div class="coverage-item"><div><h3>Towing and labor</h3><p>Option 1</p></div><strong>$8</strong></div>
+                <div class="coverage-item"><div><h3>Rental reimbursement</h3><p>Named insured</p></div><strong>Included</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Loan/lease gap coverage</h3><p>$10,000</p></div><strong>Included</strong></div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Package Upgrades</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item"><div><h3>Included package</h3><p>Essential Assurance</p></div><strong>Included</strong></div>
+                <div class="coverage-item coverage-item--last"><div><h3>Package upgrade</h3><p>No upgrade</p></div><strong>$0</strong></div>
+                <div class="coverage-perks">
+                  <h3>Essential Assurance | Included:</h3>
+                  <ul>
+                    <li>Door-to-Door Valet Claims Service*</li>
+                    <li>Guaranteed repairs</li>
+                    <li>eDocuments & reminders</li>
+                    <li>Get Home Safe taxi ride</li>
+                    <li>Online & mobile services</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="coverage-section">
+              <div class="coverage-section__header">
+                <h2>Additional Perks</h2>
+                <p>2022 CHEVROLET EQUINOX LT AWD Sport Utility Vehicle</p>
+              </div>
+              <div class="coverage-card">
+                <div class="coverage-item coverage-item--last coverage-item--action">
+                  <div>
+                    <h3>Accident forgiveness</h3>
+                  </div>
+                  <div class="coverage-item__action">
+                    <span>Not required</span>
+                    <button type="button" class="coverage-add-button">Add</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy;2025 Plymouth Rock Assurance</p>
+        <span class="footer__divider">|</span>
+        <p>
+          Protected by reCAPTCHA. Google
+          <a href="#">Privacy Policy</a>
+          and
+          <a href="#">Terms of Service</a>
+          apply.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
